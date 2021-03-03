@@ -1,0 +1,16 @@
+<h2>Filter</h2>
+<div *ngIf="!filter">
+    Loading filter values ...
+</div>
+<div *ngIf="filter">
+    Filter loaded.
+    <div>
+        Min datetime: 
+        <input type="text" value="{{filter.minDateTime}}" (change)="changeMinDate($event)">
+    </div>
+    <div>
+        Max datetime: 
+        <input type="text" value="{{filter.maxDateTime}}" (change)="changeMaxDate($event)">
+    </div>
+    <button (click)="onFilterUpdate()">filter</button>
+</div>

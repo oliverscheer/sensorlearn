@@ -1,0 +1,42 @@
+<resources>
+
+    <properties>
+        <property id="eHNamespace" type="string">garmin</property>
+        <property id="eHEventHub" type="string">watchdata</property>
+        <property id="eHSASKeyName" type="string">connectiqapp</property>
+        <property id="eHSASKey" type="string">tyko26N61gvWIKQZdJHxf4jBL8etHdhKuolKI8PJSDU=</property>
+        <property id="userID" type="string">garmin</property>
+        <property id="timer" type="number">1000</property>
+    </properties>
+
+    <strings>
+       <string id="eHNamespace_title">Namespace</string>
+       <string id="eHEventHub_title">Hub</string>
+       <string id="eHSASKeyName_title">SAS Key Name</string>
+       <string id="eHSASKey_title">SAS Key</string>
+       <string id="userID_title">User ID</string>
+       <string id="timer_title">Timer Delay</string>
+    </strings>
+
+    <settings>
+        <setting propertyKey="@Properties.eHNamespace" title="@Strings.eHNamespace_title">
+            <settingConfig type="alphaNumeric" />
+        </setting>
+        <setting propertyKey="@Properties.eHEventHub" title="@Strings.eHEventHub_title">
+            <settingConfig type="alphaNumeric" />
+        </setting>
+        <setting propertyKey="@Properties.eHSASKeyName" title="@Strings.eHSASKeyName_title">
+            <settingConfig type="alphaNumeric" />
+        </setting>
+        <setting propertyKey="@Properties.eHSASKey" title="@Strings.eHSASKey_title">
+            <settingConfig type="alphaNumeric" />
+        </setting>
+        <setting propertyKey="@Properties.userID" title="@Strings.userID_title">
+            <settingConfig type="alphaNumeric" />
+        </setting>
+        <setting propertyKey="@Properties.timer" title="@Strings.timer_title">
+            <settingConfig type="numeric" />
+        </setting>
+
+    </settings>
+</resources>

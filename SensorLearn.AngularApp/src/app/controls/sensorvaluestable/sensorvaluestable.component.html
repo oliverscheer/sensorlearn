@@ -1,0 +1,42 @@
+<h2>Table View</h2>
+<div *ngIf="!sensorValuesArray">No sensor values</div>
+
+<div *ngIf="sensorValuesArray">
+    <div>
+        rows: {{ sensorValuesArray.length }}
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <!-- <td>id</td> -->
+                <td>User ID</td>
+                <td>EventEnqueuedUtcTime</td>
+                <td>DeviceDateTime</td>
+                <td>latitude</td>
+                <td>longitude</td>
+                <td>accelerationX</td>
+                <td>accelerationY</td>
+                <td>accelerationZ</td>
+                <td>magnitudeX</td>
+                <td>magnitudeY</td>
+                <td>magnitudeZ</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of sensorValuesArray">
+                <!-- <td>{{data.id}}</td> -->
+                <td>{{data.userID}}</td>
+                <td>{{data.eventEnqueuedUtcTime}}</td>
+                <td>{{data.deviceDateTime}}</td>
+                <td>{{data.latitude}}</td>
+                <td>{{data.longitude}}</td>
+                <td>{{data.accelerationX}}</td>
+                <td>{{data.accelerationY}}</td>
+                <td>{{data.accelerationZ}}</td>
+                <td>{{data.magnitudeX}}</td>
+                <td>{{data.magnitudeY}}</td>
+                <td>{{data.magnitudeZ}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

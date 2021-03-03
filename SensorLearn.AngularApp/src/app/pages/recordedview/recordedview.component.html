@@ -1,0 +1,15 @@
+<div>
+    <app-sensorvaluesfilter [filter]="filter" (filterUpdate)="onFilterUpdate($event)"></app-sensorvaluesfilter>
+</div>
+
+<div *ngIf="!sensorDataArray">
+    no data
+</div>
+
+<div *ngIf="sensorDataArray">
+    <app-sensorvaluescanvas [sensorValuesArray]="sensorDataArray"></app-sensorvaluescanvas>
+</div>
+
+<div *ngIf="sensorDataArray">
+    <app-sensorvaluestable [sensorValuesArray]="sensorDataArray"></app-sensorvaluestable>
+</div>

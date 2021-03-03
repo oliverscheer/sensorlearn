@@ -1,0 +1,146 @@
+<p>sensorvalues works!</p>
+<div *ngIf="!sensorValues">No sensor values</div>
+<div *ngIf="sensorValues">
+    <table>
+        <thead>
+            <tr>
+                <td>Key</td>
+                <td>Value</td>
+                <td>Min</td>
+                <td>Max</td>
+                <td>Avg</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Id</td>
+                <td>{{sensorValues.id}}</td>
+            </tr>
+            <tr>
+                <td>Altitude</td>
+                <td>{{ sensorValues.altitude | number: '1.0-3'}}</td>
+                <td>{{ _minimum?.altitude | number: '1.0-3'}}</td>
+                <td>{{ _maximum?.altitude | number: '1.0-3'}}</td>
+                <td>{{ _average?.altitude | number: '1.0-3'}}</td>
+            </tr>
+            <tr>
+                <td>Latitude</td>
+                <td>{{sensorValues.latitude | number: '1.0-3'}}</td>
+                <td>{{ _minimum?.latitude | number: '1.0-3'}}</td>
+                <td>{{ _maximum?.latitude | number: '1.0-3'}}</td>
+                <td>{{ _average?.latitude | number: '1.0-3'}}</td>
+            </tr>
+            <tr>
+                <td>Longitude</td>
+                <td>{{sensorValues.longitude | number: '1.0-3'}}</td>
+                <td>{{ _minimum?.longitude | number: '1.0-3'}}</td>
+                <td>{{ _maximum?.longitude | number: '1.0-3'}}</td>
+                <td>{{ _average?.longitude | number: '1.0-3'}}</td>
+            </tr>
+            <tr *ngIf="_minimum && _average && _maximum">
+                <td>Acceleration X</td>
+                <td>{{sensorValues.accelerationX}}</td>
+                <td>{{ _minimum.accelerationX | number: '1.0-3'}}</td>
+                <td>{{ _maximum.accelerationX | number: '1.0-3'}}</td>
+                <td>{{ _average.accelerationX | number: '1.0-3'}}</td>
+            </tr>
+            <tr>
+                <td>Acceleration Y</td>
+                <td>{{sensorValues.accelerationY}}</td>
+                <td>{{ _minimum?.accelerationY | number: '1.0-3'}}</td>
+                <td>{{ _maximum?.accelerationY | number: '1.0-3'}}</td>
+                <td>{{ _average?.accelerationY | number: '1.0-3'}}</td>
+            </tr>
+            <tr>
+                <td>Acceleration Z</td>
+                <td>{{sensorValues.accelerationZ}}</td>
+                <td>{{ _minimum?.accelerationZ | number: '1.0-3'}}</td>
+                <td>{{ _maximum?.accelerationZ | number: '1.0-3'}}</td>
+                <td>{{ _average?.accelerationZ | number: '1.0-3'}}</td>
+            </tr>
+            <tr>
+                <td>Magnitude X</td>
+                <td>{{sensorValues.magnitudeX}}</td>
+                <td>{{ _minimum?.magnitudeX | number: '1.0-3'}}</td>
+                <td>{{ _maximum?.magnitudeX | number: '1.0-3'}}</td>
+                <td>{{ _average?.magnitudeX | number: '1.0-3'}}</td>
+            </tr>
+            <tr>
+                <td>Magnitude Y</td>
+                <td>{{sensorValues.magnitudeY}}</td>
+                <td>{{ _minimum?.magnitudeY | number: '1.0-3'}}</td>
+                <td>{{ _maximum?.magnitudeY | number: '1.0-3'}}</td>
+                <td>{{ _average?.magnitudeY | number: '1.0-3'}}</td>
+            </tr>
+            <tr>
+                <td>Magnitude Z</td>
+                <td>{{sensorValues.magnitudeZ}}</td>
+                <td>{{ _minimum?.magnitudeZ | number: '1.0-3'}}</td>
+                <td>{{ _maximum?.magnitudeZ | number: '1.0-3'}}</td>
+                <td>{{ _average?.magnitudeZ | number: '1.0-3'}}</td>
+            </tr>
+            <tr>
+                <td>Heartrate</td>
+                <td>{{sensorValues.heartRate}}</td>
+                <td>{{ _minimum?.heartRate | number: '1.0'}}</td>
+                <td>{{ _maximum?.heartRate | number: '1.0'}}</td>
+                <td>{{ _average?.heartRate | number: '1.0'}}</td>
+            </tr>
+            <tr>
+                <td>Cadence</td>
+                <td>{{sensorValues.cadence}}</td>
+                <td>{{ _minimum?.cadence | number: '1.0'}}</td>
+                <td>{{ _maximum?.cadence | number: '1.0'}}</td>
+                <td>{{ _average?.cadence | number: '1.0'}}</td>
+            </tr>
+            <tr>
+                <td>Power</td>
+                <td>{{sensorValues.power}}</td>
+                <td>{{ _minimum?.power | number: '1.0'}}</td>
+                <td>{{ _maximum?.power | number: '1.0'}}</td>
+                <td>{{ _average?.power | number: '1.0'}}</td>
+            </tr>
+            <tr>
+                <td>Heading</td>
+                <td>{{sensorValues.heading | number: '1.0-3'}}</td>
+                <td>{{ _minimum?.heading | number: '1.0'}}</td>
+                <td>{{ _maximum?.heading | number: '1.0'}}</td>
+                <td>{{ _average?.heading | number: '1.0'}}</td>
+            </tr>
+            <tr>
+                <td>Speed</td>
+                <td>{{sensorValues.speed}}</td>
+                <td>{{ _minimum?.speed | number: '1.0'}}</td>
+                <td>{{ _maximum?.speed | number: '1.0'}}</td>
+                <td>{{ _average?.speed | number: '1.0'}}</td>
+            </tr>
+            <tr>
+                <td>Temperature</td>
+                <td>{{sensorValues.temperature}}</td>
+                <td>{{ _minimum?.temperature | number: '1.0'}}</td>
+                <td>{{ _maximum?.temperature | number: '1.0'}}</td>
+                <td>{{ _average?.temperature | number: '1.0'}}</td>
+            </tr>
+            <tr>
+                <td>Pressure</td>
+                <td>{{sensorValues.pressure}}</td>
+                <td>{{ _minimum?.pressure | number: '1.0'}}</td>
+                <td>{{ _maximum?.pressure | number: '1.0'}}</td>
+                <td>{{ _average?.pressure | number: '1.0'}}</td>
+            </tr>
+            <tr>
+                <td>EventProcessedUtcTime</td>
+                <td>{{sensorValues.eventProcessedUtcTime}}</td>
+            </tr>
+            <tr>
+                <td>EventEnqueuedUtcTime</td>
+                <td>{{sensorValues.eventEnqueuedUtcTime}}</td>
+            </tr>
+            <tr>
+                <td>DeviceDateTime</td>
+                <td>{{sensorValues.deviceDateTime}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
